@@ -1,0 +1,188 @@
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1512; /* Preto suave com fundo marrom escuro */
+    color: #f5f5f5;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #0d0a08; /* Preto absoluto rústico */
+    border-bottom: 3px solid #b33925; /* Vermelho Terracota */
+}
+
+.logo h1 {
+    color: #d9d9d9;
+    font-size: 24px;
+}
+
+.logo h1 span {
+    color: #b33925; /* Terracota */
+}
+
+.nav a {
+    color: #c4a482; /* Marrom claro/bege */
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #b33925; /* Terracota no hover */
+}
+
+/* Banner Principal (Hero) */
+.hero {
+    background: linear-gradient(rgba(43, 29, 20, 0.7), rgba(13, 10, 8, 0.9)), 
+                url('https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=1600&auto=format&fit=crop&q=80') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    color: #f5f5f5;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #c4a482;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #b33925; /* Terracota */
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #592512; /* Marrom escuro */
+}
+
+/* Conteúdo Principal / Grid */
+.container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #c4a482;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #b33925;
+    margin: 10px auto 0;
+}
+
+.grid-cavalos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Cards dos Cavalos */
+.card-cavalo {
+    background-color: #2b1d14; /* Marrom */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+    border: 1px solid #3d2b20;
+}
+
+.card-cavalo:hover {
+    transform: translateY(-5px);
+}
+
+.card-cavalo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.card-info .descricao {
+    font-size: 14px;
+    color: #bca085;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.card-info .preco {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e65c40; /* Terracota mais claro para destaque */
+    margin-bottom: 20px;
+}
+
+.btn-comprar {
+    display: block;
+    text-align: center;
+    background-color: #0d0a08; /* Preto */
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid #b33925; /* Borda Terracota */
+    transition: all 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #b33925;
+    color: #fff;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #0d0a08;
+    text-align: center;
+    padding: 30px 20px;
+    color: #735c48;
+    font-size: 14px;
+    border-top: 1px solid #2b1d14;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
